@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Falling Shrimp</title>
+    <style>
+      * { margin: 0; padding: 0; }
+      html, body { overflow: hidden; width: 100%; height: 100%; background: #231F20; }
+      #unity-canvas { width: 100vw; height: 100vh; display: block; background: #231F20; }
+    </style>
+  </head>
+  <body>
+    <canvas id="unity-canvas" tabindex="-1"></canvas>
+    <script src="Build/WebGL.loader.js"></script>
+    <script>
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        arguments: [],
+        dataUrl: "Build/WebGL.data?v=11",
+        frameworkUrl: "Build/WebGL.framework.js?v=11",
+        codeUrl: "Build/WebGL.wasm?v=11",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "WaitWhatInteractive",
+        productName: "Falling Shrimp",
+        productVersion: "0.2.3",
+      }).catch((message) => { alert(message); });
+    </script>
+  </body>
+</html>
